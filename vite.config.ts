@@ -9,6 +9,6 @@ export default defineConfig({
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
-  base: "/malloy-motor-scan/",
   },
+  base: "/malloy-motor-scan/",
 });
