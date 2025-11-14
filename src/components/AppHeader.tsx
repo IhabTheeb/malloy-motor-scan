@@ -1,17 +1,19 @@
-import React from 'react';
+import React from "react";
 
 interface AppHeaderProps {
   onHistoryClick?: () => void;
 }
 
 export const AppHeader: React.FC<AppHeaderProps> = ({ onHistoryClick }) => {
+  // Vite sets BASE_URL to "/" in dev and "/malloy-motor-scan/" on GitHub Pages
+  const logoUrl = `${import.meta.env.BASE_URL}malloy-header.svg`;
+
   return (
     <header className="shell-header">
       <div className="shell-header-inner">
-        {/* Top banner with your logo (replace src with your image) */}
         <div className="shell-banner">
           <img
-            src="/malloy-header.svg"  // <- put your banner/logo here
+            src={logoUrl}
             alt="Malloy"
             className="shell-banner-image"
           />
